@@ -1,0 +1,6 @@
+<mvc:View controllerName="student00i.com.sap.training.ux402.fullscreen.fullscreen.controller.NotFound"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="_idPageNotFound" title="{i18n>title}">
+    </Page>
+</mvc:View>

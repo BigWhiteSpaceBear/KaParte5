@@ -1,0 +1,24 @@
+<mvc:View controllerName="student00i.com.sap.training.ux402.fullscreen.fullscreen.controller.Carrier"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="_idPageCarrier" title="{i18n>overviewPageTitle}">
+ <Table id="_idTableCarrier" items="{/UX_C_Carrier_TP}">
+        <columns>
+            <Column id="_idColumnID">
+                <Text id="_idTextid" text="{i18n>columnId}"></Text>
+            </Column>
+            <Column id="_idColumnName">
+                <Text id="_idTextName" text="{i18n>columnName}"></Text>
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem id="_idColumnListItem">
+                <cells>
+                    <ObjectIdentifier id="_idObjectIdentifierId" title="{Carrid}"/>
+                    <Text id="_idTextId" text="{Carrname}"/>
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+    </Page>
+</mvc:View>

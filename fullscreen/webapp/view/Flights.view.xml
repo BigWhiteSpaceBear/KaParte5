@@ -1,0 +1,6 @@
+<mvc:View controllerName="student00i.com.sap.training.ux402.fullscreen.fullscreen.controller.Flights"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="_idPageFlights" title="{i18n>title}">
+    </Page>
+</mvc:View>
