@@ -4,7 +4,18 @@ sap.ui.define([
     "use strict";
 
     return Controller.extend("student00i.com.sap.training.ux402.fullscreen.fullscreen.controller.Carrier", {
-        onInit() {
-        }
+      
+      getRouter: function () {
+        return sap.ui.core.UIComponent.getRouterFor(this);
+      },
+      onPress: function (oEvent) {
+        const oItem = oEvent.getSource();
+        const oCtx = oItem.getBindingContext();
+        const sCarrid = oCtx.getProperty("Carrid");
+
+        this.getRouter().navTo("flights", {
+          carrid: sCarrid
+        });
+      }
     });
 });
