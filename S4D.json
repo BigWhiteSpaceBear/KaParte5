@@ -1,0 +1,10 @@
+{
+  "systems": [
+    {
+      "name": "S4D",
+      "url": "https://s4-ka1.kasolution.com.br",
+      "client": "395",
+      "connectionType": "abap_catalog"
+    }
+  ]
+}

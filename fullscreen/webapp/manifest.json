@@ -95,21 +95,52 @@
         "viewType": "XML",
         "path": "student00i.com.sap.training.ux402.fullscreen.fullscreen.view",
         "async": true,
-        "viewPath": "student00i.com.sap.training.ux402.fullscreen.fullscreen.view"
+        "viewPath": "student00i.com.sap.training.ux402.fullscreen.fullscreen.view",
+        "bypassed": {
+          "target": [
+            "notFound"
+          ]
+        }
       },
       "routes": [
         {
-          "name": "RouteCarrier",
-          "pattern": ":?query:",
+          "name": "overview",
+          "pattern": "",
+          "titleTarget": "",
+          "greedy": false,
           "target": [
-            "TargetCarrier"
+            "overview"
+          ]
+        },
+        {
+          "name": "flights",
+          "pattern": "carrier/{carrid}",
+          "titleTarget": "",
+          "greedy": false,
+          "target": [
+            "flights"
           ]
         }
       ],
       "targets": {
-        "TargetCarrier": {
+        "overview": {
+          "viewType": "XML",
+          "transition": "slide",
           "id": "Carrier",
-          "name": "Carrier"
+          "name": "Carrier",
+          "viewLevel": 1
+        },
+        "flights": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewId": "Flights",
+          "viewName": "Flights",
+          "viewLevel": 2
+        },
+        "notFound": {
+          "viewId": "NotFound",
+          "viewName": "NotFound",
+          "transition": "show"
         }
       }
     },
