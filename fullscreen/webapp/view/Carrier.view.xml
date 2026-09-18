@@ -12,7 +12,7 @@
             </Column>
         </columns>
         <items>
-            <ColumnListItem id="_idColumnListItem">
+            <ColumnListItem id="_idColumnListItem" press="onPress" type="Navigation">
                 <cells>
                     <ObjectIdentifier id="_idObjectIdentifierId" title="{Carrid}"/>
                     <Text id="_idTextId" text="{Carrname}"/>
