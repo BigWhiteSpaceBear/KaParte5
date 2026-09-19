@@ -36,7 +36,7 @@
                 items="{path: 'to_Flight', sorter: {path: 'Carrid'}}"
                 mode="SingleSelectMaster"
                 growing="true"
-                growingThreshold="10"
+                growingThreshold="20"
             >
                 <headerToolbar>
                         <Toolbar id="_idToolbarFlights">
