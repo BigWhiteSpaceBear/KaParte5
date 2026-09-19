@@ -39,13 +39,14 @@
                 growingThreshold="10"
             >
                 <headerToolbar>
-                    <Toolbar id="_idToolbarFlights">
-                        <Title
-                            id="_idTitleFlights"
-                            text="Voos"
-                            level="H2"
-                        />
-                    </Toolbar>
+                        <Toolbar id="_idToolbarFlights">
+                            <Title
+                                id="_idTitleFlights"
+                                text="Voos"
+                                level="H2"
+                            />
+                        </Toolbar>
+                        
                 </headerToolbar>
                 <columns>
                     <Column id="_idColumnCarrierName">
@@ -74,14 +75,27 @@
                     </Column>
                 </columns>
                 <items>
-                <ColumnListItem id="_idColumnListItemFlights">
-                    <cells>
-                        <ObjectIdentifier id="_idObjectIdentifier" title="{Carrid}" text="{Carrid}"/>
-                        <Text id="_idCellsTextFlighDate" text="{path: 'Fldate', type: 'sap.ui.model.type.Date'}"/>
-                        <Text id="_idCellsTextSeatsMax" text="{Seatsmax}"/>
-                        <Text id="_idCellsTextSeatsOcc" text="{Seatsocc}"/>
-                    </cells>
-                </ColumnListItem>
+                    <ColumnListItem id="_idColumnListItemFlights">
+                        <cells>
+                            <ObjectIdentifier
+                                id="_idObjectIdentifier"
+                                title="{Carrid}"
+                                text="{Carrid}"
+                            />
+                            <Text
+                                id="_idCellsTextFlighDate"
+                                text="{path: 'Fldate', type: 'sap.ui.model.type.Date'}"
+                            />
+                            <Text
+                                id="_idCellsTextSeatsMax"
+                                text="{Seatsmax}"
+                            />
+                            <Text
+                                id="_idCellsTextSeatsOcc"
+                                text="{Seatsocc}"
+                            />
+                        </cells>
+                    </ColumnListItem>
                 </items>
             </Table>
         </content>
