@@ -33,7 +33,7 @@
             </l:VerticalLayout>
             <Table
                 id="_idTableFlights"
-                items="{path: 'to_Flights', sorter: {path: 'Carrid'}}"
+                items="{path: 'to_Flight', sorter: {path: 'Carrid'}}"
                 mode="SingleSelectMaster"
                 growing="true"
                 growingThreshold="10"
