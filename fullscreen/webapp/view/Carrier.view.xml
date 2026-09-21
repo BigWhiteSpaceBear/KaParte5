@@ -4,10 +4,10 @@
     <Page id="_idPageCarrier" title="{i18n>overviewPageTitle}">
  <Table id="_idTableCarrier" items="{/UX_C_Carrier_TP}">
         <columns>
-            <Column id="_idColumnID">
+            <Column id="_idColumnID" minScreenWidth="Tablet" demandPopin="true">
                 <Text id="_idTextid" text="{i18n>columnId}"></Text>
             </Column>
-            <Column id="_idColumnName">
+            <Column id="_idColumnName" minScreenWidth="Tablet" demandPopin="true">
                 <Text id="_idTextName" text="{i18n>columnName}"></Text>
             </Column>
         </columns>

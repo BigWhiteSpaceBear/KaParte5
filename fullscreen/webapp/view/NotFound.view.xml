@@ -1,6 +1,13 @@
 <mvc:View controllerName="student00i.com.sap.training.ux402.fullscreen.fullscreen.controller.NotFound"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="_idPageNotFound" title="{i18n>title}">
-    </Page>
+    <MessagePage 
+        id="_idMessagePage" 
+        title="{i18n>notFoundMessageTitle}" 
+        text="{i18n>notFoundMessageText}" 
+        description="{i18n>notFoundMessageDescription}" 
+        icon="sap-icon://error" 
+        showNavButton="true"
+        navButtonPress="onNavBack"
+        />
 </mvc:View>
