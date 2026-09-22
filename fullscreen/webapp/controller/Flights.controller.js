@@ -52,7 +52,7 @@ sap.ui.define([
                 }
             },
             onHoverPress: function (oEvent) {
-                var carrid = oEvent.getSource().data("id");
+                var carrid = oEvent.getSource().data("carrid");
                 var fldate = oEvent.getSource().data("fldate");
                 var connid = oEvent.getSource().data("connid");
 
