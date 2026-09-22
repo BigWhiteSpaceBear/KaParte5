@@ -73,6 +73,10 @@ sap.ui.define([
                     var customerHeader = { "Content-Type": "application/json" };
                     oModel.setHeaders(customerHeader);
 
+                    var that = this;
+                    Promise.all([this._createBookingEntry(oModel, oEntry)]).then(that._handleBookingSuccess, that._handleBookingError);
+
+                    
                 }.bind(this));
 
             },
@@ -91,7 +95,7 @@ sap.ui.define([
             },
 
             _handleBookingSuccess: function (sBookid, oResponse) {
-                MessageBox.alert("Flight booked. Booking reference number: " + sBookid );
+                MessageBox.alert("Flight booked. Booking reference number: " + sBookid);
             },
 
             _handleBookingError: function (oError) {
