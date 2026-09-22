@@ -3,6 +3,7 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
 >
     <Page
         id="_idPageFlights"
@@ -39,38 +40,62 @@
                 growingThreshold="20"
             >
                 <headerToolbar>
-                        <Toolbar id="_idToolbarFlights">
-                            <Title
-                                id="_idTitleFlights"
-                                text="Voos"
-                                level="H2"
-                            />
-                        </Toolbar>
-                        
+                    <Toolbar id="_idToolbarFlights">
+                        <Title
+                            id="_idTitleFlights"
+                            text="Voos"
+                            level="H2"
+                        />
+                    </Toolbar>
                 </headerToolbar>
                 <columns>
-                    <Column id="_idColumnCarrierName" width="12em">
+                    <Column
+                        id="_idColumnCarrierName"
+                        width="12em"
+                    >
                         <Text
                             id="_idTextCarrierName"
                             text="{i18n>carriername}"
                         />
                     </Column>
-                    <Column id="_idColumnFlightDate" minScreenWidth="Tablet" demandPopin="true">
+                    <Column
+                        id="_idColumnFlightDate"
+                        minScreenWidth="Tablet"
+                        demandPopin="true"
+                    >
                         <Text
                             id="_idTextFlightDate"
                             text="{i18n>flightdate}"
                         />
                     </Column>
-                    <Column id="_idColumnSeatMax" minScreenWidth="Tablet" demandPopin="true">
+                    <Column
+                        id="_idColumnSeatMax"
+                        minScreenWidth="Tablet"
+                        demandPopin="true"
+                    >
                         <Text
                             id="_idTextSeatMax"
                             text="{i18n>seatmax}"
                         />
                     </Column>
-                    <Column id="_idColumnSeatOcc" hAlign="Right">
+                    <Column
+                        id="_idColumnSeatOcc"
+                        hAlign="Right"
+                    >
                         <Text
                             id="_idTextSeatOcc"
                             text="{i18n>seatocc}"
+                        />
+                    </Column>
+                    <Column
+                        id="Colummn5"
+                        hAlign="Center"
+                        minScreenWidth="Tablet"
+                        demandPopin="true"
+                    >
+                        <Text
+                            id="_idTextBookFlight"
+                            text="{i18n>bookflight}"
                         />
                     </Column>
                 </columns>
@@ -94,6 +119,26 @@
                                 id="_idCellsTextSeatsOcc"
                                 text="{Seatsocc}"
                             />
+                            <Button
+                                id="idHouverButton"
+                                text="{i18n>bookflight}"
+                                press="onHoverPress"
+                            >
+                                <customData>
+                                    <core:CustomData
+                                        key="carrid"
+                                        value="{Carrid}"
+                                    />
+                                    <core:CustomData
+                                        key="connid"
+                                        value="{Connid}"
+                                    />
+                                    <core:CustomData
+                                        key="fldate"
+                                        value="{path: 'Fldate', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'yyyy-MM-dd\'T\'HH:mm:ss', UTC: true }}"
+                                    />
+                                </customData>
+                            </Button>
                         </cells>
                     </ColumnListItem>
                 </items>
