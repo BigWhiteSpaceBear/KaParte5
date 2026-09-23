@@ -74,9 +74,11 @@ sap.ui.define([
                     oModel.setHeaders(customerHeader);
 
                     var that = this;
-                    Promise.all([this._createBookingEntry(oModel, oEntry)]).then(that._handleBookingSuccess, that._handleBookingError);
+                    Promise.all([this._createBookingEntry(oModel, oEntry)]).then(
+                        that._handleBookingSuccess, 
+                        that._handleBookingError);
 
-                    
+
                 }.bind(this));
 
             },
@@ -102,7 +104,7 @@ sap.ui.define([
                 if (oError) {
                     if (oError.responseText) {
                         var oErrorResponse = JSON.parse(oError.responseText);
-                        MessageBox.error("Error booking flight: " + oErrorResponse.error.message.value);
+                        MessageBox.error("Error booking flight: " +  oErrorResponse.error.innererror.errordetails[0].message);
                     }
                 }
             }
